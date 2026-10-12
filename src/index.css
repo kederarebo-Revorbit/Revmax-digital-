@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  h1, h2, h3, .font-display {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  .font-luxury {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-mono, code, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* RevMax Brand Gradients (Royal Blue + Electric Cyan based on logo) */
+.revmax-gradient-text {
+  background: linear-gradient(135deg, #1E6BFF 0%, #00B4D8 50%, #00D2FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.revmax-brand-glow {
+  box-shadow: 0 0 25px -5px rgba(30, 107, 255, 0.25), 0 0 15px -3px rgba(0, 210, 255, 0.2);
+}
+
+.revmax-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+}
+
+.revmax-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revmax-card-hover:hover {
+  border-color: #93C5FD;
+  box-shadow: 0 12px 30px -10px rgba(30, 107, 255, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+  transform: translateY(-2px);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Motion Graphics Keyframes & Animations */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 4s linear infinite;
+  transform-origin: center center;
+}
+
+.animate-radar-sweep-fast {
+  animation: radarSweep 2.5s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes floatSlowReverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-float-reverse {
+  animation: floatSlowReverse 6s ease-in-out infinite;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulseRing 2.4s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+@keyframes dataStreamDash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-data-stream {
+  stroke-dasharray: 6 4;
+  animation: dataStreamDash 1.2s linear infinite;
+}
+
+.animate-data-stream-fast {
+  stroke-dasharray: 6 3;
+  animation: dataStreamDash 0.8s linear infinite;
+}
+
+@keyframes shimmerSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmerSlide 2.5s infinite;
+}
+
+@keyframes scanlineMove {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-scanline {
+  animation: scanlineMove 6s linear infinite;
+}
+
+@keyframes waveOscillate {
+  0%, 100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave-bar {
+  animation: waveOscillate 1.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+
